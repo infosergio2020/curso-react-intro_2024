@@ -13,13 +13,20 @@ const defaultTodos=[{text:'Cortar cebolla',completed:true},{text:'Tomar el Curso
 
 function App() {
   return (
-    <div className="App">
-      <TodoCounter completed={16} total={25}/>
-      <TodoSearch/>
-      <TodoList>
-        {defaultTodos.map((todo,index)=>(<TodoItem key={index} text={todo.text} completed={todo.completed}/>))}
-      </TodoList>
-      <Button></Button>
+    <div className="container">
+      <div className="child">
+        <TodoCounter completed={16} total={25}/>
+        <TodoSearch/>
+        <TodoList>
+          {defaultTodos.map((todo,index)=>(<TodoItem key={index} text={todo.text} completed={todo.completed}/>))}
+        </TodoList>
+      </div>
+
+      <div className="child">
+        <Button></Button>
+      </div>
+
+      
     </div>
   );
 }

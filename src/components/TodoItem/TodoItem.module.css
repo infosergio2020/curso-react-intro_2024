@@ -1,6 +1,65 @@
-.TodoItem {}
-.Icon {}
-.IconCheckActive {}
-.TodoItemP {}
-.TodoItemPComplete {}
-.IconDelete {}
+/* Estilo para cada ítem de la lista de tareas */
+.TodoItem {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px auto;
+    transition: transform 0.3s ease-in-out;
+    text-align: start;
+}
+
+.TodoItem:hover {
+    transform: scale(1.05);
+}
+
+
+/* Icono genérico */
+.Icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Icon:hover {
+    transform: scale(1.1);
+}
+
+/* Icono de verificación activa */
+.IconCheckActive {
+    color: green;
+}
+
+/* Estilo para el párrafo del ítem de tarea */
+.TodoItemP {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el párrafo del ítem de tarea completada */
+.TodoItemPComplete {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    margin: 0;
+    padding: 0;
+}
+
+/* Icono de eliminación */
+.IconDelete {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: red;
+    transition: transform 0.3s ease-in-out;
+}
+
+.IconDelete:hover {
+    transform: scale(1.1);
+}

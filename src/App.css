@@ -1,38 +1,75 @@
-.App {
+/* apply a natural box layout model to all elements, but allowing components to change */
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html{
+  font-size: 16px; /* 1rem = 16px */
+}
+
+/* Reset básico para asegurar consistencia entre navegadores */
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  font-family: sans-serif;
+  font-size: 1rem; /* 16px */
+}
+
+/* Eliminar decoraciones y formatos predeterminados */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Ejemplo de uso de rem y em */
+h1 {
+  font-size: 2rem; /* 32px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.container {
+  font-size: 1rem; /* 16px */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .child {
   text-align: center;
-}
+  font-size: 1.25em; /* 20px (1.25 * 16px) */
+  margin-bottom: 1em; /* 20px (1.25 * 16px) */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  flex: 1 1 50%; /* Toma 50% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #233553;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #97ca3f;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .child {
+      flex: 1 1 100%; /* Toma 100% del ancho del contenedor en pantallas móviles */
+      display: flex;
+      justify-content: center;
   }
 }
