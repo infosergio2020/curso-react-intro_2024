@@ -19,6 +19,17 @@ body {
   line-height: 1;
   font-family: sans-serif;
   font-size: 1rem; /* 16px */
+
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  /* background: linear-gradient(135deg, #f5f5dc 0%, #f5deb3 100%); */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none; /* Evita que el contenido sea seleccionable */
 }
 
 /* Eliminar decoraciones y formatos predeterminados */
@@ -51,6 +62,12 @@ p {
   font-size: 1rem; /* 16px */
   display: flex;
   flex-wrap: wrap;
+
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .container .child {
@@ -73,3 +90,4 @@ p {
       justify-content: center;
   }
 }
+

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
 const Button = () => (
-  <button className={styles.Button}>
-    +
+  <button className={`${styles.Button} ${styles.addButton}`}>
+    addTask
   </button>
 );
 

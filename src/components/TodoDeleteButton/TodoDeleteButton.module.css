@@ -1,0 +1,27 @@
+/* Estilo base del botón de eliminar */
+.TodoDeleteButton {
+  background: linear-gradient(45deg, #d32f2f, #c62828); /* Degradado de rojo a rojo más oscuro */
+  border: 2px solid #333;
+  color: white; /* Color de texto blanco para contraste */
+  padding: 8px; /* Ajusta el tamaño del botón */
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+  border-radius: 50%; /* Hace que el botón sea circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+/* Estilo al pasar el mouse */
+.TodoDeleteButton:hover {
+  background: linear-gradient(45deg, #c62828, #d32f2f); /* Invierte el degradado al pasar el mouse */
+}
+
+/* Ajuste de tamaño de texto para contenido centrado */
+.TodoDeleteButton span {
+  font-size: 18px; /* Tamaño de fuente ajustado */
+}

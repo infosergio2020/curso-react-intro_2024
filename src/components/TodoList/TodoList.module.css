@@ -1,5 +1,26 @@
 .TodoList {
     list-style: none;
-    padding: 0;
+    padding: 1rem 0;
     margin: 0;
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
+
+
+  
+/* Ajuste de colores para otros elementos dentro de TodoList */
+
+.TodoList li {
+    padding: 0.5rem 1rem;
+    background-color: #ffffff; /* Color de fondo similar al gradiente base */
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.TodoList li:hover {
+    background-color: #e0e0e0; /* Color de fondo más claro al pasar el mouse */
+}
+  

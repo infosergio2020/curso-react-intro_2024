@@ -1,6 +1,6 @@
 /* Estilo para cada ítem de la lista de tareas */
 .TodoItem {
-    width: 80%;
+    width: 90%;
     background-color: #fff;
     border: 1px solid #dfe1e5;
     border-radius: 8px;
@@ -8,6 +8,10 @@
     margin: 10px auto;
     transition: transform 0.3s ease-in-out;
     text-align: start;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .TodoItem:hover {

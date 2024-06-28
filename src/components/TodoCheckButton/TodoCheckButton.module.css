@@ -1,0 +1,25 @@
+.TodoCheckButton {
+    background: none;
+    border: 2px solid #333;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+/* Estilo cuando está checked */
+.TodoCheckButton.checked {
+  background-color: #333; /* Color de fondo oscuro cuando está checked */
+  color: white; /* Color de texto blanco para contraste */
+}
+
+/* Estilo al pasar el mouse */
+.TodoCheckButton:hover {
+  background-color: #fda085; /* Color del degradado final cuando se pasa el mouse */
+  color: #333; /* Color de texto para contraste */
+}

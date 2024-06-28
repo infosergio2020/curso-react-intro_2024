@@ -1,1 +1,31 @@
-.AddTodoForm {}
+.AddTodoForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    outline: none; /* Elimina el borde al enfocar el botón */
+  }
+  
+  .AddTodoForm h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .AddTodoForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .AddTodoForm input::placeholder {
+    color: #aaa;
+  }
+  
+  .AddTodoForm button {
+    margin-top: 10px;
+  }
