@@ -4,7 +4,9 @@ import { AiOutlineClose } from 'react-icons/ai'; // Importa el icono de cerrar d
 import styles from './TodoDeleteButton.module.css';
 
 const TodoDeleteButton = () => (
-  <button className={styles.TodoDeleteButton}>
+  <button className={styles.TodoDeleteButton} onClick={(event)=>{
+    console.log("has presionado borrar");
+    }}>
     <AiOutlineClose />
   </button>
 );

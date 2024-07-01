@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="container">
       <div className="child">
-        <TodoCounter completed={16} total={25}/>
+        <TodoCounter completed={(defaultTodos.filter((todo)=> todo.completed).length )} total={defaultTodos.length}/>
         <TodoSearch/>
         <TodoList>
           {defaultTodos.map((todo,index)=>(<TodoItem key={index} text={todo.text} completed={todo.completed}/>))}

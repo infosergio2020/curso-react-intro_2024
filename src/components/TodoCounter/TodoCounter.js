@@ -9,12 +9,12 @@ const TodoCounter = ({total, completed}) => (
 );
 
 TodoCounter.propTypes = {
-  completed: PropTypes.bool,
+  completed: PropTypes.number,
   total: PropTypes.number.isRequired,
 };
 
 TodoCounter.defaultProps = {
-  completed: false,
+  completed: 0,
   total: 0
 };
 
