@@ -4,12 +4,18 @@
   border-radius: 5px;
   margin: 5px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: background 0.4s, color 0.4s, transform 0.2s ease, box-shadow 0.2s ease;
-  background: linear-gradient(45deg, #fbc02d, #f57f17);
+  background: linear-gradient(45deg, #fbc12d, #f57f17);
   color: white;
   user-select: none; /* Evita que el contenido sea seleccionable */
   z-index: 1;
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; /* Agrega borde negro a las letras */
 }
 
 .Button:hover {
@@ -22,16 +28,17 @@
 }
 
 .ButtonCallModal{
+  background: linear-gradient(45deg, #92711c, #9e5210);
   padding: 20px 20px;
   position: absolute;
-  right: 0;
+  right: 5%;
   bottom: 5%;
   border: 1px solid #00000075;
   border-radius: 50%;
 }
 
 .ButtonCallModal:hover{
-  background: linear-gradient(45deg, #a3540f, #b1871c); 
+  background: linear-gradient(45deg, #c09426, #ce6b14);
   animation: pulse 1s infinite; /* Aplica la animación pulsante */
 }
 
