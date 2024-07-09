@@ -9,6 +9,7 @@
   background: linear-gradient(45deg, #fbc02d, #f57f17);
   color: white;
   user-select: none; /* Evita que el contenido sea seleccionable */
+  z-index: 1;
 }
 
 .Button:hover {
@@ -18,4 +19,30 @@
 .Button:active {
   transform: translateY(2px); /* Desplazamiento hacia abajo al hacer clic */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer clic */
+}
+
+.ButtonCallModal{
+  padding: 20px 20px;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  border: 1px solid #00000075;
+  border-radius: 50%;
+}
+
+.ButtonCallModal:hover{
+  background: linear-gradient(45deg, #a3540f, #b1871c); 
+  animation: pulse 1s infinite; /* Aplica la animación pulsante */
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Tamaño máximo en el centro del ciclo */
+  }
+  100% {
+      transform: scale(1);
+  }
 }

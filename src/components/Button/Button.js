@@ -1,20 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { FaPlus } from "react-icons/fa6";
 import styles from './Button.module.css';
 
-const Button = () => (
-  <button className={`${styles.Button} ${styles.addButton}`}
-  onClick={(event)=>{
-    console.log("haz hecho click en crear evento");
-    console.log(event);
-    console.log(event.target);
-    }}>
-    addTask
-  </button>
-);
+const Button = ({setFunction,title,callModal}) => {
 
-Button.propTypes = {};
-
-Button.defaultProps = {};
+  return !callModal ? (<button className={`${styles.Button}`}
+  onClick={setFunction}> {title}
+  </button>) : (
+    <button className={`${styles.Button} ${styles.ButtonCallModal}`}
+    onClick={setFunction}> <FaPlus />
+    </button>
+  );
+  
+};
 
 export {Button};

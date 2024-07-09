@@ -6,12 +6,13 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    
+    max-height: 40rem; /* Altura máxima antes de que aparezca el scroll */
+    overflow-y: auto;
+    scroll-behavior: smooth; /* Suaviza la transición del scroll */
 }
 
-
-  
 /* Ajuste de colores para otros elementos dentro de TodoList */
-
 .TodoList li {
     padding: 0.5rem 1rem;
     background-color: #ffffff; /* Color de fondo similar al gradiente base */
@@ -24,3 +25,18 @@
     background-color: #e0e0e0; /* Color de fondo más claro al pasar el mouse */
 }
   
+
+.TodoList::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    display: none; /* Oculta la scrollbar en navegadores basados en WebKit */
+}
+
+.TodoList::-webkit-scrollbar-track {
+    background: #ccc; /* Color del track de la barra de desplazamiento */
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 10px; /* Radio de borde del pulgar */
+    border: 2px solid #ccc; /* Borde del pulgar */
+}

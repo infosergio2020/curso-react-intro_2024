@@ -10,10 +10,18 @@ import { EmptyTodos } from "./components/EmptyTodos/EmptyTodos";
 import { Modal } from "./components/Modal/Modal";
 import { TodoContext } from "./TodoContext/TodoContext";
 import "./App.css";
-
+import { Button } from "./components/Button/Button";
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo,openModal } = useContext(TodoContext);
+  const {
+    loading,
+    error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    toggleOpenModal,
+  } = useContext(TodoContext);
   return (
     <div className="container">
       <div className="child">
@@ -40,11 +48,15 @@ function AppUI() {
         </TodoList>
       </div>
 
-      { !openModal && (<Modal> funcionalidad de agregar todos </Modal>) }
+      
 
       {/* <div className="child">
         <AddTodoForm />
       </div> */}
+
+      <Button callModal={true} setFunction={() => {toggleOpenModal(); }} title={"+"} />
+
+      {openModal && <Modal> <AddTodoForm /> </Modal>}
     </div>
   );
 }

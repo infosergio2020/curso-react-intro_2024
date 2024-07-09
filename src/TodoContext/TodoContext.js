@@ -25,6 +25,14 @@ function TodoProvider({children}) {
   });
 
   // funciones que modifican el estado
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      text,
+      completed:false,
+    })
+    saveTodos(newTodos);
+  };
   const completeTodo = (id) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex((todo) => todo.text === id);
@@ -40,6 +48,10 @@ function TodoProvider({children}) {
     console.log("deleteTodo is running...");
   };
 
+  const toggleOpenModal = ()=>{
+    setOpenModal(state => !state);
+  }
+
   // Declaro todas las proviedades que quiero que sean visibles para los componentes child
   //establezco {children} entre providers para encapsular cualquier componente que quiera ser envuelto dentro de este provider
   return (<TodoContext.Provider value={{
@@ -53,7 +65,8 @@ function TodoProvider({children}) {
     loading,
     error,
     openModal,
-    setOpenModal,
+    toggleOpenModal,
+    addTodo
   }}>
     {children}
   </TodoContext.Provider>);

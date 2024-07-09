@@ -11,7 +11,7 @@ const TodoCounter = () => {
   (totalTodos === completedTodos) ?
    <h1>Has completado todas las tareas, felicidades 🥳</h1>
    :
-   <h1>Has completado<span>{completedTodos}</span> de <span>{totalTodos}</span>TODOs</h1>
+   <h1>Has completado <span>{completedTodos}</span> de <span>{totalTodos}</span> TODOs</h1>
    }
 
   </div>
