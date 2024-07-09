@@ -1,0 +1,19 @@
+/* src/components/LoadingSpinner.module.css */
+.spinnerContainer {
+    display: inline-block;
+    animation: spin 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  }
+  
+  .spinnerIcon {
+    font-size: 2rem; /* Ajusta el tamaño del icono según tus necesidades */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

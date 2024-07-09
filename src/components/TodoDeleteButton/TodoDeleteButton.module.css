@@ -3,7 +3,7 @@
   background: linear-gradient(45deg, #d32f2f, #c62828); /* Degradado de rojo a rojo más oscuro */
   border: 2px solid #333;
   color: white; /* Color de texto blanco para contraste */
-  padding: 8px; /* Ajusta el tamaño del botón */
+  padding: 4px; /* Ajusta el tamaño del botón */
   cursor: pointer;
   outline: none;
   transition: background 0.3s ease;

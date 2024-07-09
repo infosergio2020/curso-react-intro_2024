@@ -4,13 +4,14 @@ import styles from './TodoItem.module.css';
 import { TodoCheckButton } from './../TodoCheckButton/TodoCheckButton';
 import { TodoDeleteButton } from './../TodoDeleteButton/TodoDeleteButton';
 
-const TodoItem = (props) => (
-  <li className={styles.TodoItem}>
-    <TodoCheckButton />
-    <p className={`${styles.TodoItemP} ${props.completed && styles.TodoItemPComplete}`}>{props.text}</p>
-    <TodoDeleteButton />
+const TodoItem = ({completed, text, onCompleted, onDeleted}) => {
+  return (
+  <li className={styles.TodoItem} >
+    <TodoCheckButton checked={completed} onCompleted={onCompleted}/>
+    <p className={`${styles.TodoItemP} ${completed && styles.TodoItemPComplete}`}>{text}</p>
+    <TodoDeleteButton onDeleted={onDeleted}/>
   </li>
-);
+)};
 
 TodoItem.propTypes = {
   completed: PropTypes.bool,

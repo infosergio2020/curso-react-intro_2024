@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, {useContext} from "react";
+//import PropTypes from "prop-types";
 import styles from "./TodoSearch.module.css";
+import { TodoContext } from "./../../TodoContext/TodoContext";
 
 const TodoSearch = () => {
-  const [searchValue, setSearchValue] = useState('');
-
-  console.log(`valor a buscar es: ${searchValue}`);
+  const { searchValue,setSearchValue } = useContext(TodoContext);
 
   return (
     <>
@@ -19,8 +18,7 @@ const TodoSearch = () => {
   );
 };
 
-TodoSearch.propTypes = {};
-
-TodoSearch.defaultProps = {};
+//TodoSearch.propTypes = {};
+//TodoSearch.defaultProps = {};
 
 export { TodoSearch };
